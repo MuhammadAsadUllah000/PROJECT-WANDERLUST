@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html{
+    // font-size: 62.5%;
+
+    
+
+    
+    @include respond(tab-land){             //width < 1200px
+        font-size: 65%;                //1rem=11px, 11/16=68.75%
+    }
+
+
+    @include respond(tab-port){            //width < 900px
+        font-size: 62.5%;              //1rem=10px, 10/16=62.5%
+    }
+
+    @include respond(phone){           //width < 600px
+        font-size: 50%;               //1rem=8px, 8/16=50*    //.4*16=6.4px
+    }
+
+
+    @include respond(big-desktop){
+        font-size: 100%;                 //1rem=16px, 16/16=100%
+    }
+
+
+
+}
+
+
+
+
+body{
+    font-family: Lato, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $color-gray-dark;
+    line-height: 1.7;
+    padding: 3rem;
+
+
+    @include respond(tab-port){
+        padding: 0;
+    }
+
+}
+
+
+
+::selection{
+    background-color: $color-primary;
+    color: $color-white;
+}
